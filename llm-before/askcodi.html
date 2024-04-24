@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photographer Portfolio</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    section {
+        padding: 20px;
+    }
+    h2 {
+        color: #333;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+    .gallery img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input, textarea, button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Photographer Portfolio</h1>
+</header>
+
+<section id="gallery1">
+    <h2>Gallery 1 - Project A</h2>
+    <div class="gallery">
+        <img src="https://source.unsplash.com/random/400x300" alt="Project A Image 1">
+        <img src="https://source.unsplash.com/random/401x300" alt="Project A Image 2">
+        <img src="https://source.unsplash.com/random/402x300" alt="Project A Image 3">
+    </div>
+    <p>Date Taken: MM/DD/YYYY</p>
+    <p>Subject: Subject A</p>
+</section>
+
+<section id="gallery2">
+    <h2>Gallery 2 - Project B</h2>
+    <div class="gallery">
+        <img src="https://source.unsplash.com/random/403x300" alt="Project B Image 1">
+        <img src="https://source.unsplash.com/random/404x300" alt="Project B Image 2">
+        <img src="https://source.unsplash.com/random/405x300" alt="Project B Image 3">
+    </div>
+    <p>Date Taken: MM/DD/YYYY</p>
+    <p>Subject: Subject B</p>
+</section>
+
+<section id="gallery3">
+    <h2>Gallery 3 - Project C</h2>
+    <div class="gallery">
+        <img src="https://source.unsplash.com/random/406x300" alt="Project C Image 1">
+        <img src="https://source.unsplash.com/random/407x300" alt="Project C Image 2">
+        <img src="https://source.unsplash.com/random/408x300" alt="Project C Image 3">
+    </div>
+    <p>Date Taken: MM/DD/YYYY</p>
+    <p>Subject: Subject C</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget magna ut erat condimentum vestibulum.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2022 Photographer Name | Contact: photographer@example.com</p>
+</footer>
+</body>
+</html>

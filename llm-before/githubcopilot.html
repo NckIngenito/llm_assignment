@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            margin: 10px;
+        }
+        .gallery-item img {
+            width: 300px;
+            height: 200px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photographer's Portfolio</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://source.unsplash.com/random/300x200" alt="Random Image 1">
+            <h2>Title 1</h2>
+            <p>Description 1</p>
+            <p>Date: 2022-01-01</p>
+            <p>Subject: Subject 1</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://source.unsplash.com/random/300x200?sig=1" alt="Random Image 2">
+            <h2>Title 2</h2>
+            <p>Description 2</p>
+            <p>Date: 2022-01-02</p>
+            <p>Subject: Subject 2</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://source.unsplash.com/random/300x200?sig=2" alt="Random Image 3">
+            <h2>Title 3</h2>
+            <p>Description 3</p>
+            <p>Date: 2022-01-03</p>
+            <p>Subject: Subject 3</p>
+        </div>
+    </div>
+
+    <h2>About</h2>
+    <p>About the photographer...</p>
+
+    <h2>Contact</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="footer">
+        <p>Copyright &copy; 2022 Photographer's Name</p>
+        <p>Contact: email@example.com</p>
+    </div>
+</body>
+</html>
