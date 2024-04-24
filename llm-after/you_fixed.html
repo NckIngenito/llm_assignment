@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Photographer Portfolio</title>
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .gallery-item {
+      width: 300px;
+      margin: 10px;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+    }
+    
+    section {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photographer Portfolio</h1>
+  </header>
+  
+  <section id="about">
+    <h2>About</h2>
+    <p>Insert your about content here.</p>
+  </section>
+  
+  <section id="galleries">
+    <h2>Galleries</h2>
+    
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/random/800x600" alt="Gallery 1 Image">
+        <h3>Gallery 1</h3>
+        <p>Date Taken: INSERT_DATE_TAKEN</p>
+        <p>Subject: INSERT_SUBJECT</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/random/800x600" alt="Gallery 2 Image">
+        <h3>Gallery 2</h3>
+        <p>Date Taken: INSERT_DATE_TAKEN</p>
+        <p>Subject: INSERT_SUBJECT</p>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/random/800x600" alt="Gallery 3 Image">
+        <h3>Gallery 3</h3>
+        <p>Date Taken: INSERT_DATE_TAKEN</p>
+        <p>Subject: INSERT_SUBJECT</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 Photographer Portfolio. All rights reserved. | Contact: INSERT_CONTACT_INFO</p>
+  </footer>
+</body>
+</html>

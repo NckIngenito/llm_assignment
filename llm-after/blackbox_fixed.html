@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photographer Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .gallery {
+      margin: 40px 0;
+    }
+    .gallery h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .gallery p {
+      font-size: 1em;
+      color: #333; /* Changed text color to #333 */
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border: 3px solid #ddd;
+    }
+    .about {
+      background: #fff;
+      padding: 40px;
+      margin: 40px 0;
+    }
+    .contact-form {
+      background: #f9f9f9;
+      padding: 40px;
+      margin: 40px 0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+    }
+    .contact-form button {
+      padding: 15px 30px;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #555;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photographer Portfolio</h1>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Add your about content here.</p>
+    </section>
+    <section id="galleries">
+      <h2>Galleries</h2>
+      <div class="gallery">
+        <h3>Gallery 1</h3>
+        <p>Date: April 24, 2024</p>
+        <p>Subject: Landscapes</p>
+        <div class="gallery-images">
+          <!-- Add your images here -->
+        </div>
+      </div>
+      <!-- Repeat the gallery structure for Gallery 2 and Gallery 3 -->
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Photographer Portfolio. All rights reserved.</p>
+    <p>Contact: <a href="mailto:contact@photographer.com">contact@photographer.com</a></p>
+  </footer>
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-images');
+
+    galleryImages.forEach((gallery, index) => {
+      fetch(`https://api.unsplash.com/photos/random?client_id=YOUR_ACCESS_KEY&count=6`)
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image.urls.small;
+            img.alt = image.description || 'Random Image';
+            gallery.appendChild(img);
+          });
+        });
+    });
+  </script>
+</body>
+</html>
